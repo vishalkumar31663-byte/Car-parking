@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Custom fee estimate | CityParking</title>
+        <link href="assets/logo-icon.png" rel="icon" type="image/png">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="top">
+            <div class="wrap nav">
+                <a class="logo" href="index.html"><img alt="" class="brand-image" src="assets/logo-icon.png"/><span class="brand-text"><strong>City<span>Parking</span></strong><small>Rate &amp; Availability Guide</small></span></a>
+                <nav>
+                    <a href="index.html#calculator">Back to estimator</a>
+                </nav>
+            </div>
+        </header>
+        <main class="wrap calc-page">
+            <section class="panel">
+                <span class="tag">Custom duration</span>
+                <h1>Calculate your parking fee</h1>
+                <p>The JavaScript calculator asks for a parking location, vehicle type and duration. It displays the estimated charge in a browser dialog.</p>
+                <ol>
+                    <li>Select a location from 1 to 4.</li>
+                    <li>Choose a two-wheeler or four-wheeler.</li>
+                    <li>Enter between 0.5 and 24 hours.</li>
+                </ol>
+                <p>To repeat or correct your entry, use the link below. For the visual estimator, return to the main page.</p>
+                <div class="actions" style="margin-top:20px"><a class="button" href="calculator.html">Calculate again</a><a class="button secondary" href="index.html#calculator">Back to visual estimator</a></div>
+            </section>
+        </main>
+        <script src="calculator.js"></script>
+        <script>customEstimate();</script>
+    </body>
+</html>

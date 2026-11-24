@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Compare city parking availability, hourly rates and entry and exit landmarks in a student demonstration." name="description">
+        <title>CityParking | Find a spot before you go</title>
+        <link href="assets/logo-icon.png" rel="icon" type="image/png">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="top">
+            <div class="wrap nav">
+                <a class="logo" href="#top"><img alt="" class="brand-image" src="assets/logo-icon.png"/><span class="brand-text"><strong>City<span>Parking</span></strong><small>Rate &amp; Availability Guide</small></span></a>
+                <nav aria-label="Main navigation">
+                    <a href="#directory">Parking lots</a>
+                    <a href="#calculator">Fee calculator</a>
+                    <a href="#directions">Directions</a>
+                </nav>
+            </div>
+        </header>
+        <main id="top">
+            <section class="hero">
+                <div class="wrap hero-grid">
+                    <div>
+                        <span class="tag">City parking guide / Student project</span>
+                        <h1>Find a spot.<br>Know the cost.</h1>
+                        <p>Compare parking availability, check hourly charges and find the right entrance before you leave.</p>
+                        <div class="actions"><a class="button" href="#directory">Explore parking lots</a><a class="button secondary" href="#calculator">Estimate your fee</a></div>
+                    </div>
+                    <img alt="Parking layout with open bays and parked vehicles" class="hero-art" src="assets/parking.svg">
+                </div>
+            </section>
+            <div class="wrap">
+                <section aria-label="Parking summary" class="stats">
+                    <div class="stat"><strong>4</strong><span>Parking locations</span></div>
+                    <div class="stat"><strong>52</strong><span>Two-wheeler spaces open</span></div>
+                    <div class="stat"><strong>19</strong><span>Four-wheeler spaces open</span></div>
+                </section>
+                <div class="note"><strong>Demonstration data:</strong> availability, rates and gate landmarks are illustrative, not live municipal information. No reservation or payment is made.</div>
+                <section class="section" id="directory">
+                    <div class="section-head">
+                        <div><span class="tag">01 / Directory</span><h2>Explore parking locations</h2><p>Filter by locality and compare available spaces and prices.</p></div>
+                    </div>
+                    <div aria-label="Filter parking locations" role="group">
+                        <input checked="" class="choice" id="filter-all" name="locality" type="radio">
+                        <input class="choice" id="filter-shopping" name="locality" type="radio">
+                        <input class="choice" id="filter-railway" name="locality" type="radio">
+                        <input class="choice" id="filter-court" name="locality" type="radio">
+                        <input class="choice" id="filter-market" name="locality" type="radio">
+                        <div class="pills"><label for="filter-all">All locations</label><label for="filter-shopping">Shopping District</label><label for="filter-railway">Railway Station Lot</label><label for="filter-court">Court Complex</label><label for="filter-market">Central Market</label></div>
+                        <div class="lot-grid">
+                            <article class="lot shopping">
+                                <div class="lot-heading">
+                                    <div><h3>Shopping District</h3><p class="sub">Commercial area</p></div>
+                                    <span class="number">P01</span>
+                                </div>
+                                <div class="vehicle">
+                                    <div class="vehicle-top"><strong>Two-wheeler</strong><span class="open">Open</span></div>
+                                    <div class="vehicle-bottom"><span>18 / 40 spaces open</span><strong>₹20/hr</strong></div>
+                                    <div aria-label="45% spaces open" class="track" role="img">
+                                        <div class="bar" style="width:45%"></div>
+                                    </div>
+                                </div>
+                                <div class="vehicle">
+                                    <div class="vehicle-top"><strong>Four-wheeler</strong><span class="open">Open</span></div>
+                                    <div class="vehicle-bottom"><span>8 / 20 spaces open</span><strong>₹50/hr</strong></div>
+                                    <div aria-label="40% spaces open" class="track" role="img">
+                                        <div class="bar" style="width:40%"></div>
+                                    </div>
+                                </div>
+                                <div class="lot-bottom"><a href="#gate-shopping">Entry &amp; exit details →</a><a href="#calculator">Estimate fee</a></div>
+                            </article>
+                            <article class="lot railway">
+                                <div class="lot-heading">
+                                    <div><h3>Railway Station Lot</h3><p class="sub">Transit hub</p></div>
+                                    <span class="number">P02</span>
+                                </div>
+                                <div class="vehicle">
+                                    <div class="vehicle-top"><strong>Two-wheeler</strong><span class="full">Full</span></div>
+                                    <div class="vehicle-bottom"><span>0 / 30 spaces open</span><strong>₹15/hr</strong></div>
+                                    <div aria-label="0% spaces open" class="track" role="img">
+                                        <div class="bar zero" style="width:100%"></div>
+                                    </div>
+                                </div>
+                                <div class="vehicle">
+                                    <div class="vehicle-top"><strong>Four-wheeler</strong><span class="open">Open</span></div>
+                                    <div class="vehicle-bottom"><span>6 / 15 spaces open</span><strong>₹40/hr</strong></div>
+                                    <div aria-label="40% spaces open" class="track" role="img">
+                                        <div class="bar" style="width:40%"></div>
+                                    </div>
+                                </div>
+                                <div class="lot-bottom"><a href="#gate-railway">Entry &amp; exit details →</a><a href="#calculator">Estimate fee</a></div>
+                            </article>
+                            <article class="lot court">
+                                <div class="lot-heading">
+                                    <div><h3>Court Complex</h3><p class="sub">Civic area</p></div>
+                                    <span class="number">P03</span>
+                                </div>
+                                <div class="vehicle">
+                                    <div class="vehicle-top"><strong>Two-wheeler</strong><span class="open">Open</span></div>
+                                    <div class="vehicle-bottom"><span>12 / 25 spaces open</span><strong>₹10/hr</strong></div>
+                                    <div aria-label="48% spaces open" class="track" role="img">
+                                        <div class="bar" style="width:48%"></div>
+                                    </div>
+                                </div>
+                                <div class="vehicle">
+                                    <div class="vehicle-top"><strong>Four-wheeler</strong><span class="full">Full</span></div>
+                                    <div class="vehicle-bottom"><span>0 / 10 spaces open</span><strong>₹30/hr</strong></div>
+                                    <div aria-label="0% spaces open" class="track" role="img">
+                                        <div class="bar zero" style="width:100%"></div>
+                                    </div>
+                                </div>
+                                <div class="lot-bottom"><a href="#gate-court">Entry &amp; exit details →</a><a href="#calculator">Estimate fee</a></div>
+                            </article>
+                            <article class="lot market">
+                                <div class="lot-heading">
+                                    <div><h3>Central Market</h3><p class="sub">Retail area</p></div>
+                                    <span class="number">P04</span>
+                                </div>
+                                <div class="vehicle">
+                                    <div class="vehicle-top"><strong>Two-wheeler</strong><span class="open">Open</span></div>
+                                    <div class="vehicle-bottom"><span>22 / 45 spaces open</span><strong>₹25/hr</strong></div>
+                                    <div aria-label="49% spaces open" class="track" role="img">
+                                        <div class="bar" style="width:49%"></div>
+                                    </div>
+                                </div>
+                                <div class="vehicle">
+                                    <div class="vehicle-top"><strong>Four-wheeler</strong><span class="open">Open</span></div>
+                                    <div class="vehicle-bottom"><span>5 / 18 spaces open</span><strong>₹60/hr</strong></div>
+                                    <div aria-label="28% spaces open" class="track" role="img">
+                                        <div class="bar" style="width:28%"></div>
+                                    </div>
+                                </div>
+                                <div class="lot-bottom"><a href="#gate-market">Entry &amp; exit details →</a><a href="#calculator">Estimate fee</a></div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                <section class="section" id="calculator">
+                    <div class="section-head">
+                        <div><span class="tag">02 / Price estimator</span><h2>Plan your parking cost</h2><p>Pick a location, vehicle and duration to view the estimated charge.</p></div>
+                    </div>
+                    <div aria-label="Parking fee estimator" class="panel estimate" role="group">
+                        <input checked="" class="choice" id="loc-shopping" name="loc" type="radio">
+                        <input class="choice" id="loc-railway" name="loc" type="radio">
+                        <input class="choice" id="loc-court" name="loc" type="radio">
+                        <input class="choice" id="loc-market" name="loc" type="radio">
+                        <input checked="" class="choice" id="type-two" name="type" type="radio">
+                        <input class="choice" id="type-four" name="type" type="radio">
+                        <input class="choice" id="hours-1" name="hours" type="radio">
+                        <input checked="" class="choice" id="hours-2" name="hours" type="radio">
+                        <input class="choice" id="hours-3" name="hours" type="radio">
+                        <input class="choice" id="hours-4" name="hours" type="radio">
+                        <input class="choice" id="hours-5" name="hours" type="radio">
+                        <input class="choice" id="hours-6" name="hours" type="radio">
+                        <input class="choice" id="hours-8" name="hours" type="radio">
+                        <input class="choice" id="hours-12" name="hours" type="radio">
+                        <div class="controls">
+                            <h3 class="field-title">Parking location</h3>
+                            <div class="pills"><label for="loc-shopping">Shopping District</label><label for="loc-railway">Railway Station Lot</label><label for="loc-court">Court Complex</label><label for="loc-market">Central Market</label></div>
+                            <h3 class="field-title">Vehicle type</h3>
+                            <div class="pills"><label for="type-two">Two-wheeler</label><label for="type-four">Four-wheeler</label></div>
+                            <h3 class="field-title">Duration</h3>
+                            <div class="pills"><label for="hours-1">1 h</label><label for="hours-2">2 h</label><label for="hours-3">3 h</label><label for="hours-4">4 h</label><label for="hours-5">5 h</label><label for="hours-6">6 h</label><label for="hours-8">8 h</label><label for="hours-12">12 h</label></div>
+                            <a href="calculator.html">Need a custom duration? Open JavaScript calculator →</a>
+                        </div>
+                        <div class="result">
+                            <span class="tag">Estimated total</span>
+                            <div class="fee-group fee-shopping-two">
+                                <div class="amount hour-1">₹20</div>
+                                <div class="amount hour-2">₹40</div>
+                                <div class="amount hour-3">₹60</div>
+                                <div class="amount hour-4">₹80</div>
+                                <div class="amount hour-5">₹100</div>
+                                <div class="amount hour-6">₹120</div>
+                                <div class="amount hour-8">₹160</div>
+                                <div class="amount hour-12">₹240</div>
+                                <div class="rate-line">₹20/hour × <span class="duration hour-1">1 hour</span><span class="duration hour-2">2 hours</span><span class="duration hour-3">3 hours</span><span class="duration hour-4">4 hours</span><span class="duration hour-5">5 hours</span><span class="duration hour-6">6 hours</span><span class="duration hour-8">8 hours</span><span class="duration hour-12">12 hours</span></div>
+                            </div>
+                            <div class="fee-group fee-shopping-four">
+                                <div class="amount hour-1">₹50</div>
+                                <div class="amount hour-2">₹100</div>
+                                <div class="amount hour-3">₹150</div>
+                                <div class="amount hour-4">₹200</div>
+                                <div class="amount hour-5">₹250</div>
+                                <div class="amount hour-6">₹300</div>
+                                <div class="amount hour-8">₹400</div>
+                                <div class="amount hour-12">₹600</div>
+                                <div class="rate-line">₹50/hour × <span class="duration hour-1">1 hour</span><span class="duration hour-2">2 hours</span><span class="duration hour-3">3 hours</span><span class="duration hour-4">4 hours</span><span class="duration hour-5">5 hours</span><span class="duration hour-6">6 hours</span><span class="duration hour-8">8 hours</span><span class="duration hour-12">12 hours</span></div>
+                            </div>
+                            <div class="fee-group fee-railway-two">
+                                <div class="amount hour-1">₹15</div>
+                                <div class="amount hour-2">₹30</div>
+                                <div class="amount hour-3">₹45</div>
+                                <div class="amount hour-4">₹60</div>
+                                <div class="amount hour-5">₹75</div>
+                                <div class="amount hour-6">₹90</div>
+                                <div class="amount hour-8">₹120</div>
+                                <div class="amount hour-12">₹180</div>
+                                <div class="rate-line">₹15/hour × <span class="duration hour-1">1 hour</span><span class="duration hour-2">2 hours</span><span class="duration hour-3">3 hours</span><span class="duration hour-4">4 hours</span><span class="duration hour-5">5 hours</span><span class="duration hour-6">6 hours</span><span class="duration hour-8">8 hours</span><span class="duration hour-12">12 hours</span></div>
+                            </div>
+                            <div class="fee-group fee-railway-four">
+                                <div class="amount hour-1">₹40</div>
+                                <div class="amount hour-2">₹80</div>
+                                <div class="amount hour-3">₹120</div>
+                                <div class="amount hour-4">₹160</div>
+                                <div class="amount hour-5">₹200</div>
+                                <div class="amount hour-6">₹240</div>
+                                <div class="amount hour-8">₹320</div>
+                                <div class="amount hour-12">₹480</div>
+                                <div class="rate-line">₹40/hour × <span class="duration hour-1">1 hour</span><span class="duration hour-2">2 hours</span><span class="duration hour-3">3 hours</span><span class="duration hour-4">4 hours</span><span class="duration hour-5">5 hours</span><span class="duration hour-6">6 hours</span><span class="duration hour-8">8 hours</span><span class="duration hour-12">12 hours</span></div>
+                            </div>
+                            <div class="fee-group fee-court-two">
+                                <div class="amount hour-1">₹10</div>
+                                <div class="amount hour-2">₹20</div>
+                                <div class="amount hour-3">₹30</div>
+                                <div class="amount hour-4">₹40</div>
+                                <div class="amount hour-5">₹50</div>
+                                <div class="amount hour-6">₹60</div>
+                                <div class="amount hour-8">₹80</div>
+                                <div class="amount hour-12">₹120</div>
+                                <div class="rate-line">₹10/hour × <span class="duration hour-1">1 hour</span><span class="duration hour-2">2 hours</span><span class="duration hour-3">3 hours</span><span class="duration hour-4">4 hours</span><span class="duration hour-5">5 hours</span><span class="duration hour-6">6 hours</span><span class="duration hour-8">8 hours</span><span class="duration hour-12">12 hours</span></div>
+                            </div>
+                            <div class="fee-group fee-court-four">
+                                <div class="amount hour-1">₹30</div>
+                                <div class="amount hour-2">₹60</div>
+                                <div class="amount hour-3">₹90</div>
+                                <div class="amount hour-4">₹120</div>
+                                <div class="amount hour-5">₹150</div>
+                                <div class="amount hour-6">₹180</div>
+                                <div class="amount hour-8">₹240</div>
+                                <div class="amount hour-12">₹360</div>
+                                <div class="rate-line">₹30/hour × <span class="duration hour-1">1 hour</span><span class="duration hour-2">2 hours</span><span class="duration hour-3">3 hours</span><span class="duration hour-4">4 hours</span><span class="duration hour-5">5 hours</span><span class="duration hour-6">6 hours</span><span class="duration hour-8">8 hours</span><span class="duration hour-12">12 hours</span></div>
+                            </div>
+                            <div class="fee-group fee-market-two">
+                                <div class="amount hour-1">₹25</div>
+                                <div class="amount hour-2">₹50</div>
+                                <div class="amount hour-3">₹75</div>
+                                <div class="amount hour-4">₹100</div>
+                                <div class="amount hour-5">₹125</div>
+                                <div class="amount hour-6">₹150</div>
+                                <div class="amount hour-8">₹200</div>
+                                <div class="amount hour-12">₹300</div>
+                                <div class="rate-line">₹25/hour × <span class="duration hour-1">1 hour</span><span class="duration hour-2">2 hours</span><span class="duration hour-3">3 hours</span><span class="duration hour-4">4 hours</span><span class="duration hour-5">5 hours</span><span class="duration hour-6">6 hours</span><span class="duration hour-8">8 hours</span><span class="duration hour-12">12 hours</span></div>
+                            </div>
+                            <div class="fee-group fee-market-four">
+                                <div class="amount hour-1">₹60</div>
+                                <div class="amount hour-2">₹120</div>
+                                <div class="amount hour-3">₹180</div>
+                                <div class="amount hour-4">₹240</div>
+                                <div class="amount hour-5">₹300</div>
+                                <div class="amount hour-6">₹360</div>
+                                <div class="amount hour-8">₹480</div>
+                                <div class="amount hour-12">₹720</div>
+                                <div class="rate-line">₹60/hour × <span class="duration hour-1">1 hour</span><span class="duration hour-2">2 hours</span><span class="duration hour-3">3 hours</span><span class="duration hour-4">4 hours</span><span class="duration hour-5">5 hours</span><span class="duration hour-6">6 hours</span><span class="duration hour-8">8 hours</span><span class="duration hour-12">12 hours</span></div>
+                            </div>
+                            <p>Estimate only. Check slot availability separately.</p>
+                        </div>
+                    </div>
+                    <div class="panel table-wrap">
+                        <table>
+                            <caption style="text-align:left;font-weight:bold;margin-bottom:10px">Hourly rate reference</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Location</th>
+                                    <th scope="col">Two-wheeler</th>
+                                    <th scope="col">Four-wheeler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Shopping District</td>
+                                    <td>₹20</td>
+                                    <td>₹50</td>
+                                </tr>
+                                <tr>
+                                    <td>Railway Station Lot</td>
+                                    <td>₹15</td>
+                                    <td>₹40</td>
+                                </tr>
+                                <tr>
+                                    <td>Court Complex</td>
+                                    <td>₹10</td>
+                                    <td>₹30</td>
+                                </tr>
+                                <tr>
+                                    <td>Central Market</td>
+                                    <td>₹25</td>
+                                    <td>₹60</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="section" id="directions">
+                    <div class="section-head">
+                        <div><span class="tag">03 / Navigation</span><h2>Entry and exit guide</h2><p>Illustrative landmarks to demonstrate how the application guides drivers.</p></div>
+                    </div>
+                    <div class="directions">
+                        <article class="direction" id="gate-shopping">
+                            <h3>Shopping District</h3>
+                            <p><strong>Entry:</strong> Main shopping plaza entrance</p>
+                            <p><strong>Exit:</strong> Market service lane</p>
+                            <p>Enter from the plaza-facing road and follow the marked parking lane.</p>
+                            <p><a href="#directory">Back to directory ↑</a></p>
+                        </article>
+                        <article class="direction" id="gate-railway">
+                            <h3>Railway Station Lot</h3>
+                            <p><strong>Entry:</strong> Station approach road</p>
+                            <p><strong>Exit:</strong> Passenger pickup lane</p>
+                            <p>Use the designated parking entrance beside the station forecourt.</p>
+                            <p><a href="#directory">Back to directory ↑</a></p>
+                        </article>
+                        <article class="direction" id="gate-court">
+                            <h3>Court Complex</h3>
+                            <p><strong>Entry:</strong> Main court approach</p>
+                            <p><strong>Exit:</strong> Administrative block side road</p>
+                            <p>Approach the visitor parking lane from the court entrance.</p>
+                            <p><a href="#directory">Back to directory ↑</a></p>
+                        </article>
+                        <article class="direction" id="gate-market">
+                            <h3>Central Market</h3>
+                            <p><strong>Entry:</strong> Main market gate</p>
+                            <p><strong>Exit:</strong> Rear market road</p>
+                            <p>Use the main gate and follow the signs toward the visitor parking area.</p>
+                            <p><a href="#directory">Back to directory ↑</a></p>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="wrap"><strong>CityParking · CSE326 Internet Programming</strong><span>Academic prototype · HTML, CSS and JavaScript</span></div>
+        </footer>
+    </body>
+</html>
